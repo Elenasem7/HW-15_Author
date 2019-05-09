@@ -1,0 +1,110 @@
+$navbar-color:            #484c55;
+$navbar-font-size:          15px;
+$navbar-padding:            30px 15px;
+$navbar-background:         $global-background;    
+$navbar-border:             3px solid transparent;
+
+$navbar-hover-color:        $global-primary-color;
+$navbar-hover-background:   #f8f9fb;    
+$navbar-hover-border:       3px solid $navbar-hover-color;
+
+
+.navbar {
+  &-nav {
+    display: none;
+    margin:0 -2px;
+    list-style: none;
+    li {
+      a {
+        display: inline-block;
+        padding: $navbar-padding;
+        border-bottom: $navbar-border;
+        background: $navbar-background;
+        color: $navbar-color;
+        font-size: $navbar-font-size;
+        text-decoration: none;
+        &:hover {
+          border-bottom: $navbar-hover-border;
+          background: $navbar-hover-background;
+          color: $navbar-hover-color;
+        }
+      }
+    }
+    li.active {
+      a {
+        border-bottom: $navbar-hover-border;
+        background: $navbar-hover-background;
+        color: $navbar-hover-color;
+      }
+    }
+  }
+  
+  &-nav-mobile {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+}
+
+@media (max-width:1199px) {
+.navbar-burger {
+  // position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 58px;
+  height: 44px;
+  background-color: $global-primary-color;
+  padding: 10px 0;
+  border-radius: 3px;
+  margin: 23px 0;
+  margin-right: 100px;
+}
+
+.navbar-burger > div {
+  width: 37px;
+  height: 6px;
+  background-color: #ffffff;
+}
+}
+
+
+
+@media (min-width:1200px) {
+  .navbar {
+    &-nav {
+      display: flex;
+    }
+  }
+
+  .navbar-burger {
+    display: none;
+  }
+}
+
+
+
+
+  //   .navbar-open {
+  //     display: flex;
+  //     flex-direction: column;
+  //     position: absolute;
+  //     z-index: +4;
+  //     right: 0;
+  //     bottom: -150%;
+  //     background: #ffffff;
+  //   }
+  
+  //   .navbar-open > li {
+  //     color: #05316b;  
+  //     font-size: 18px;
+  //     font-weight: 300;
+  //     text-decoration: none;
+  //     padding: 8px;
+  //     border-bottom: 1px solid #054aa3;
+  //   }
+  
+  //   .navbar-open > a:hover {
+  //     background-color: $global-primary-color;
+  //   }
+  
